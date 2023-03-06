@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sp-platform
+spec:
+  selector:
+    app: sp-platform
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8087
+      targetPort: 8087
+  type: LoadBalancer
